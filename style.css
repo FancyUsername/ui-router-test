@@ -1,0 +1,16 @@
+.active {
+    font-weight: bold;
+    #background-color: #b4d22d;
+}
+
+.list-group a {
+    color: black;
+}
+
+.statevis {
+    position: fixed;
+    right: 2em;
+    top: 2em;
+    z-index: -1;
+    height: 5em;
+}
