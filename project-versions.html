@@ -1,2 +1,15 @@
 <h3>Project Versions</h3>
-{{project}}
+<table class="table-condensed">
+    <tbody>
+        <tr ng-repeat="version in $ctrl.versions">
+            <td>{{version.name}} ({{version.id}})</td>
+            <td>
+                <div class="progress" style="margin-bottom: 0; width: 150px">
+                    <div class="progress-bar progress-bar-info" role="progressbar" style="width: {{version.progress * 100}}%;">
+                        {{version.progress * 100 | number:0}} %
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>

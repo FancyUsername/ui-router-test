@@ -1,11 +1,11 @@
-<h2>Project {{project.name}}</h2>
-<div>Id: {{project.id}}</div>
-<div>Company: {{project.company}}</div>
-<div>Email: {{project.email}}</div>
-<div>Address: {{project.address}}</div>
+<h2>Project {{$ctrl.project.name}}</h2>
+<div>Id: {{$ctrl.project.id}}</div>
+<div>Company: {{$ctrl.project.company}}</div>
+<div>Email: {{$ctrl.project.email}}</div>
+<div>Address: {{$ctrl.project.address}}</div>
 
 <ul class="nav nav-tabs">
-  <li><a ui-sref="projects.project.versions" ui-sref-active="active">Versions</a></li>
+  <li><a ui-sref="projects.project.versions" ui-sref-active="active">Versions <span class="badge">{{$ctrl.project.versions.count}}</span></a></li>
   <li><a ui-sref="projects.project.timetracking" ui-sref-active="active">Timetracking</a></li>
 </ul>
 

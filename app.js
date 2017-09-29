@@ -13,38 +13,37 @@
                 {
                     name: 'projects',
                     url: '/projects',
-                    templateUrl: 'projects.html',
+                    component: 'projects',
                     resolve: {
                         projects: function (projectService) {
                             return projectService.getAllProjects();
                         }
-                    },
-                    controller: function($scope, projects) {
-                        $scope.projects = projects;
                     }
                 },
                 {
                     name: 'projects.project',
                     url: '/{projectId}',
-                    templateUrl: 'project.html',
+                    component: 'project',
                     resolve: {
-                        project: function (projectService, $stateParams) {
-                            return projectService.getProject($stateParams.projectId);
+                        project: function (projects, $transition$) {
+                            return projects.find(p => p.id === $transition$.params().projectId);
                         }
-                    },
-                    controller: function($scope, project) {
-                        $scope.project = project;
                     }
                 },
                 {
                     name: 'projects.project.versions',
                     url: '/versions',
-                    templateUrl: 'project-versions.html'
+                    component: 'projectVersions',
+                    resolve: {
+                        versions: function (project, projectService) {
+                            return projectService.getVersions(project.versions.href, []);
+                        }
+                    }
                 },
                 {
                     name: 'projects.project.timetracking',
                     url: '/timetracking',
-                    templateUrl: 'project-timetracking.html'
+                    component: 'projectTimetracking'
                 }
             ];
 

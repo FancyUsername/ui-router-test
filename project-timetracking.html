@@ -1,1 +1,22 @@
 <h3>Project Timetracking</h3>
+<from-to-datepicker on-dates-selected="$ctrl.datesSelected(dateStart, dateEnd)"></from-to-datepicker>
+
+<table class="table table-condensed col-md-4" ng-if="$ctrl.projects">
+    <thead>
+        <th>Issues</th>
+        <th ng-repeat="assignee in $ctrl.assignees">{{assignee}}</th>
+        <th>Total</th>
+    </thead>
+    <tbody>
+        <tr ng-repeat="issue in $ctrl.issues">
+            <td>{{issue}}</td>
+            <td ng-repeat="assignee in $ctrl.assignees">{{$ctrl.getTimespent(issue, assignee)}}</td>
+            <td><b>{{$ctrl.getTotalByIssue(issue)}}</b></td>
+        </tr>
+        <tr>
+            <td>Total:</td>
+            <td ng-repeat="assignee in $ctrl.assignees"><b>{{$ctrl.getTotalByAssignee(assignee)}}</b></td>
+            <td><b>{{$ctrl.getTotal()}}</b></td>
+        </tr>
+    </tbody>
+</table>

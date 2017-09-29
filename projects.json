@@ -6,7 +6,11 @@
         "name": "Ingrid Townsend",
         "company": "JASPER",
         "email": "ingridtownsend@jasper.com",
-        "address": "690 Charles Place, Santel, Northern Mariana Islands, 3791"
+        "address": "690 Charles Place, Santel, Northern Mariana Islands, 3791",
+        "versions": {
+            "count": 3,
+            "href": "projects.291.versions.json"
+        }
   },
     {
         "id": "581",
@@ -15,7 +19,11 @@
         "name": "Estrada Nolan",
         "company": "FIBRODYNE",
         "email": "estradanolan@fibrodyne.com",
-        "address": "317 Seeley Street, Cade, Maryland, 3976"
+        "address": "317 Seeley Street, Cade, Maryland, 3976",
+        "versions": {
+            "count": 1,
+            "href": "projects.581.versions.json"
+        }
   },
     {
         "id": "29",
@@ -24,7 +32,10 @@
         "name": "Laverne Andrews",
         "company": "INTRAWEAR",
         "email": "laverneandrews@intrawear.com",
-        "address": "760 Provost Street, Valle, Alaska, 4628"
+        "address": "760 Provost Street, Valle, Alaska, 4628",
+        "versions": {
+            "count": 0
+        }
   },
     {
         "id": "856",
@@ -33,7 +44,11 @@
         "name": "Hull Woodward",
         "company": "SENMAO",
         "email": "hullwoodward@senmao.com",
-        "address": "452 Union Avenue, Hachita, Palau, 9166"
+        "address": "452 Union Avenue, Hachita, Palau, 9166",
+        "versions": {
+            "count": 3,
+            "href": "projects.291.versions.json"
+        }
   },
     {
         "id": "2321",
@@ -42,6 +57,10 @@
         "name": "Maria Stanley",
         "company": "EYERIS",
         "email": "mariastanley@eyeris.com",
-        "address": "350 Remsen Avenue, Abrams, Ohio, 6355"
+        "address": "350 Remsen Avenue, Abrams, Ohio, 6355",
+        "versions": {
+            "count": 3,
+            "href": "projects.291.versions.json"
+        }
   }
 ]

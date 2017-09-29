@@ -5,7 +5,7 @@
        <input type="search" class="form-control" id="search-input" placeholder="Search..." autocomplete="off" spellcheck="false" role="combobox" ng-model="projectFilter.name">
        
         <ul class="list-group">
-            <li class="list-group-item" ng-repeat="project in projects | filter:projectFilter" ui-sref-active="active">
+            <li class="list-group-item" ng-repeat="project in $ctrl.projects | filter:projectFilter" ui-sref-active="active">
                 <a ui-sref="projects.project({ projectId: project.id })">{{project.name}}</a>
                 <br/>{{project.id}}
             </li>
