@@ -1,18 +1,26 @@
-<h3>Projects:</h3>
+<div class="btn-group navbar-right">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    View <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu">
+    <li><a href="#"><span class="glyphicon btn-md glyphicon-align-justify"></span> List</a></li>
+    <li><a href="#"><span class="glyphicon btn-md glyphicon-list"></span> Details</a></li>
+  </ul>
+</div>
+
 
 <div class="row">
     <div class="col-md-3">
-       <input type="search" class="form-control" id="search-input" placeholder="Search..." autocomplete="off" spellcheck="false" role="combobox" ng-model="$ctrl.projectFilter">
-       
+        <input type="search" class="form-control" id="search-input" placeholder="Search..." autocomplete="off" spellcheck="false" role="combobox" ng-model="$ctrl.projectFilter">
+
         <ul class="list-group">
             <li class="list-group-item" ng-repeat="project in $ctrl.projects | filter:$ctrl.search" ui-sref-active="active">
                 <a ui-sref="projects.project({ projectId: project.id })">{{project.name}} <small>{{project.id}}</small></a>
-                <br/>
-                {{project.projectlead}}
+                <br/> {{project.projectlead}}
             </li>
         </ul>
     </div>
-    
+
     <div class="col-md-9">
         <ui-view></ui-view>
     </div>

@@ -14,3 +14,11 @@
     z-index: -1;
     height: 5em;
 }
+
+.progress-bar {
+    color: black;
+}
+
+#search-input {
+    margin-bottom: 0.5em;
+}
