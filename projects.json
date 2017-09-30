@@ -1,12 +1,13 @@
 [
     {
-        "id": "293",
-        "isActive": false,
-        "eyeColor": "brown",
+        "id": "291",
         "name": "Ingrid Townsend",
-        "company": "JASPER",
-        "email": "ingridtownsend@jasper.com",
-        "address": "690 Charles Place, Santel, Northern Mariana Islands, 3791",
+        "lastchange": "2017-04-17 19:24",
+        "issuesdone": 23,
+        "issuestotal": 68,
+        "timespent": 47382,
+        "timetotal": 274853,
+        "projectlead": "CS",
         "versions": {
             "count": 3,
             "href": "projects.291.versions.json"
@@ -14,12 +15,13 @@
   },
     {
         "id": "581",
-        "isActive": true,
-        "eyeColor": "blue",
         "name": "Estrada Nolan",
-        "company": "FIBRODYNE",
-        "email": "estradanolan@fibrodyne.com",
-        "address": "317 Seeley Street, Cade, Maryland, 3976",
+        "lastchange": "2017-04-10 14:12",
+        "issuesdone": 2,
+        "issuestotal": 5,
+        "timespent": 123,
+        "timetotal": 343,
+        "projectlead": "AW",
         "versions": {
             "count": 1,
             "href": "projects.581.versions.json"
@@ -27,24 +29,26 @@
   },
     {
         "id": "29",
-        "isActive": true,
-        "eyeColor": "brown",
         "name": "Laverne Andrews",
-        "company": "INTRAWEAR",
-        "email": "laverneandrews@intrawear.com",
-        "address": "760 Provost Street, Valle, Alaska, 4628",
+        "lastchange": "2016-01-17 10:00",
+        "issuesdone": 343,
+        "issuestotal": 410,
+        "timespent": 39328,
+        "timetotal": 274853,
+        "projectlead": "HK",
         "versions": {
             "count": 0
         }
   },
     {
         "id": "856",
-        "isActive": false,
-        "eyeColor": "green",
         "name": "Hull Woodward",
-        "company": "SENMAO",
-        "email": "hullwoodward@senmao.com",
-        "address": "452 Union Avenue, Hachita, Palau, 9166",
+        "lastchange": "2017-08-17 20:00",
+        "issuesdone": 33,
+        "issuestotal": 33,
+        "timespent": 3939,
+        "timetotal": 3940,
+        "projectlead": "TG",
         "versions": {
             "count": 3,
             "href": "projects.291.versions.json"
@@ -52,12 +56,13 @@
   },
     {
         "id": "2321",
-        "isActive": false,
-        "eyeColor": "green",
         "name": "Maria Stanley",
-        "company": "EYERIS",
-        "email": "mariastanley@eyeris.com",
-        "address": "350 Remsen Avenue, Abrams, Ohio, 6355",
+        "lastchange": "2017-10-01 11:17",
+        "issuesdone": 388,
+        "issuestotal": 924,
+        "timespent": 849,
+        "timetotal": 2895,
+        "projectlead": "HK",
         "versions": {
             "count": 3,
             "href": "projects.291.versions.json"
