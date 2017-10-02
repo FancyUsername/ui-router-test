@@ -22,3 +22,37 @@
 #search-input {
     margin-bottom: 0.5em;
 }
+
+#datepicker-contour {
+    background-color: #D3D3D4;
+    padding: 8px;
+    float: left;
+    border-radius: 4px;
+}
+
+#datepicker-contour>*:not(:last-child) {
+    margin-right: 7px;
+}
+
+input[type=text].app-btn {
+    background: #fff;
+    color: #000;
+    text-align: left;
+}
+
+.app-btn {
+  -webkit-border-radius: 4;
+  -moz-border-radius: 4;
+  border-radius: 4px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 13px;
+  background: #3498db;
+  padding: 7px 14px 7px 14px;
+  text-decoration: none;
+}
+
+.app-btn:hover {
+  background: #3cb0fd;
+  text-decoration: none;
+}

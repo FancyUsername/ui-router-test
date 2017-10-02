@@ -5,27 +5,46 @@
             scope: {
                 onDatesSelected: "&"
             },
-            template: `
-                <input type="text" id="dt1">
-                <input type="text" id="dt2">`,
+            templateUrl: 'from-to-datepicker.html',
+            controller: function ($scope, $location) {
+                if ($location.search().dateFrom) {
+                    $scope.dateFrom = $location.search().dateFrom;
+                }
+                if ($location.search().dateTo) {
+                    $scope.dateTo = $location.search().dateTo;
+                }
+                
+                $scope.notifySelected = function() {
+                    $scope.updateUrl();
+                    if ($scope.onDatesSelected) {
+                        $scope.onDatesSelected({
+                            "dateStart": $scope.dateFrom,
+                            "dateEnd": $scope.dateTo
+                        });
+                    }
+                };
+                
+                $scope.updateUrl = function() {
+                    if ($scope.dateFrom) {
+                        $location.search('dateFrom', $scope.dateFrom);
+                    }
+                    if ($scope.dateTo) {
+                        $location.search('dateTo', $scope.dateTo);
+                    }
+                };
+            },
             link: function (scope, element, attrs) {
                 $(element).find("#dt1").datepicker(Object.assign(datepickerConfig(), {
                     onSelect: function (date) {
                         scope.dateFrom = date;
                         $(element).find("#dt2").val(date);
                         scope.$apply();
+                        setTimeout(() => $(element).find("#dt2").datepicker("show"), 100);
                     }
                 }));
                 $(element).find("#dt2").datepicker(Object.assign(datepickerConfig(), {
                     onSelect: function (date) {
                         scope.dateTo = date;
-                        scope.$apply();
-                        if (scope.onDatesSelected) {
-                            scope.onDatesSelected({
-                                "dateStart": scope.dateFrom,
-                                "dateEnd": scope.dateTo
-                            });
-                        }
                     }
                 }));
             }
@@ -34,7 +53,8 @@
 
     function datepickerConfig() {
         return {
-            dateFormat: 'D dd.mm.yy',
+            //dateFormat: 'D dd.mm.yy',
+            dateFormat: 'dd.mm.yy',
             firstDay: 1,
             showWeek: true,
             weekHeader: "KW",

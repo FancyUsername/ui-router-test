@@ -15,7 +15,10 @@
                     return true;
                 }
                 
-                return _.find(_.toArray(_.pick(item, ['id', 'name', 'projectlead'])), p => p.toLowerCase().indexOf(vm.projectFilter.toLowerCase()) >= 0);
+                return _(item)
+                    .pick(['id', 'name', 'projectlead'])
+                    .toArray()
+                    .find(p => p.toLowerCase().indexOf(vm.projectFilter.toLowerCase()) >= 0);
             };
 
             function filterChanged(searchText) {
